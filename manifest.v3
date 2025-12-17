@@ -12,17 +12,18 @@
   <record name="requires" javaclass="com.wm.util.Values">
     <value name="TPP_services_in_FCS">1.0</value>
     <value name="WmJDBCAdapter">10.3.0.0.34</value>
+    <value name="WmSalesforceRESTProvider">12.0.0.0.4</value>
   </record>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">26</value>
+  <value name="build">27</value>
   <null name="description"/>
   <value name="created_date">17-12-2025 11:52:23 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <Boolean name="isProjectPackage">false</Boolean>
-  <value name="lastUpdated">2025-12-17T13:11:07.739906225Z</value>
+  <value name="lastUpdated">2025-12-17T13:11:18.51624113Z</value>
   <value name="wmProjectId">fl2a27b976fd604ecc885448274199381e</value>
   <value name="creator">Rima Barman</value>
 </Values>
