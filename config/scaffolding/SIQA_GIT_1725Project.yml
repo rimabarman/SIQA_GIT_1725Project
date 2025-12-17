@@ -8,64 +8,122 @@ packages:
   gitUsername: rimabarman
   gitBranch: main
 - name: TPP_services_in_FCS
+  version: "1.0"
   gitServerName: kvv
   gitUrl: https://github.com/Karthik-V-IBM-10
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
 services:
+- serviceName: project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1
+  packages:
+  - name: SIQA_GIT_1725Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.siqa_git_1725.integrations:Call_refData
+  packages:
+  - name: SIQA_GIT_1725Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.siqa_git_1725.referencedata:refData
+  packages:
+  - name: SIQA_GIT_1725Project
+    version: "1.0"
+  - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.siqa_git_1725.integrations:Copy_Sum
   packages:
   - name: SIQA_GIT_1725Project
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: pub.math:addInts
   packages:
   - name: WmPublic
-    version: 12.0.0.0.688
+    version: 12.0.0.0.691
 - serviceName: pub.flow:debugLog
   packages:
   - name: WmPublic
-    version: 12.0.0.0.688
+    version: 12.0.0.0.691
 - serviceName: project.siqa_git_1725.integrations:Sum
   packages:
   - name: SIQA_GIT_1725Project
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.siqa_git_1725.integrations:deepclonetest
   packages:
   - name: SIQA_GIT_1725Project
     version: "1.0"
   - name: TPP_services_in_FCS
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: pub.string:stringToBytes
   packages:
   - name: WmPublic
-    version: 12.0.0.0.688
+    version: 12.0.0.0.691
 - serviceName: pub.utils:deepClone
   packages:
   - name: WmPublic
-    version: 12.0.0.0.688
+    version: 12.0.0.0.691
 - serviceName: pub.string:bytesToString
   packages:
   - name: WmPublic
-    version: 12.0.0.0.688
+    version: 12.0.0.0.691
 - serviceName: pub.alert:emit
   packages:
   - name: WmPublic
-    version: 12.0.0.0.688
+    version: 12.0.0.0.691
 configurationVariables:
   jdbc.Embedded-Database-Pool.waitingThread: "0"
   jdbc.SAP-TxStore-Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP-TxStore-Pool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
+  : "10"
   jdbcfunc.SAPTxStore.failFastMode: false
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
+  : "1"
   jdbcfunc.Xref.failFastMode: true
   jdbcfunc.ISDashboardStats.connPoolAlias: Embedded-Database-Pool
   jdbc.SAP-TxStore-Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.networkProtocol
+  : tcp
   jdbcfunc.Xref.connPoolAlias: Embedded-Database-Pool
   jdbc.Embedded-Database-Pool.userid: APP
   jdbcfunc.ISInternal.connPoolAlias: Embedded-Database-Pool
   jdbc.Embedded-Database-Pool.password: "{AES}Zcw2EXTJgNDVmVzJO2Y3Bw=="
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.dbType
+  : MSSQL
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.serverName
+  : 9.60.195.99
   jdbc.SAP-TxStore-Pool.userid: root
   jdbc.Embedded-Database-Pool.snoopenabled: "false"
   jdbc.SAP-TxStore-Pool.snoopenabled: "false"
@@ -73,23 +131,57 @@ configurationVariables:
   jdbcfunc.ISInternal.failFastMode: true
   jdbc.Embedded-Database-Pool.maxConns: "10"
   jdbc.SAP-TxStore-Pool.waitingThread: "10"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.password
+  : "{AES}X4QCAWgjWkTdMQvFA5XaqGmK1wuN3U1rA1B0VhuZoUw="
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.portNumber
+  : "1433"
   jdbc.Embedded-Database-Pool.expireTime: "60000"
   jdbc.Embedded-Database-Pool.useSSL: "false"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.transactionType
+  : NO_TRANSACTION
   jdbc.Embedded-Database-Pool.minConns: "0"
   jdbc.Embedded-Database-Pool.driverAlias: Embedded Database Driver
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.datasourceClass
+  : com.wm.dd.jdbcx.sqlserver.SQLServerDataSource
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.minimumPoolSize
+  : "1"
   jdbc.Embedded-Database-Pool.spyparms: SpyAttributes=(log=(file)logs/spy/Embedded-Database-Pool.log;logTName=yes;timestamp=yes)
   jdbc.Embedded-Database-Pool.dbURL: jdbc:derby:embedded;create=true
   jdbc.SAP-TxStore-Pool.useSSL: "false"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionEnabled
+  : "false"
   jdbcfunc.SAPTxStore.connPoolAlias: SAP-TxStore-Pool
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.trustStore
+  : ""
   jdbcfunc.ISDashboardStats.failFastMode: false
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.databaseName
+  : SIQACloud
   jdbc.Embedded-Database-Pool.spyenabled: "false"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolable
+  : "false"
   jdbc.SAP-TxStore-Pool.poolThreshold: "0"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.expireTimeout
+  : "1000"
   jdbc.SAP-TxStore-Pool.expireTime: "60000"
   jdbc.SAP-TxStore-Pool.spyparms: SpyAttributes=(log=(file)logs/spy/SAP-TxStore-Pool.log;logTName=yes;timestamp=yes)
   jdbc.SAP-TxStore-Pool.minConns: "5"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.user
+  : sa
   jdbc.SAP-TxStore-Pool.description: Connection Pool for the SAP Transaction Store
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.keyStore
+  : ""
   jdbc.SAP-TxStore-Pool.spyenabled: "false"
   jdbc.SAP-TxStore-Pool.maxConns: "10"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.driverType
+  : Progress® DataDirect®
   jdbc.Embedded-Database-Pool.poolThreshold: "0"
   jdbc.SAP-TxStore-Pool.password: "{AES}nrGf3u7Wt20hFBGh5ZeEuQ=="
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
   jdbc.SAP-TxStore-Pool.driverAlias: MySQL CC Driver
