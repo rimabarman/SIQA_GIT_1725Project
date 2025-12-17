@@ -1,3 +1,10 @@
 version: "1.0"
 projectName: SIQA_GIT_1725Project
-runtimes: []
+runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: Untitled Workflow
+    type: workflow
+    uid: fl14e8ec2bff9d4024b3d12cfaf30ef190
+    stepId: a0
+    reference: services:add3Ints
