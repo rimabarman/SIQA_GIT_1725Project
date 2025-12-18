@@ -13,10 +13,6 @@ packages:
   gitUrl: https://github.com/Karthik-V-IBM-10
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
-- name: WmJDBCAdapter
-  version: 10.3.0.0.34
-  wpmServer: https://packages.webmethods.io
-  wpmRegistry: licensed
 - name: WmSalesforceRESTProvider
   version: 12.0.0.0.4
   wpmServer: https://packages.webmethods.io
@@ -183,11 +179,11 @@ configurationVariables:
   : project.siqa_git_1725.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:SoapConnAlias
   ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.maximumPoolSize
   : "10"
-  jdbcfunc.SAPTxStore.failFastMode: false
-  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
-  : "0"
   ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.poolIncrementSize
   : "1"
+  ? artConnection.SIQA_GIT_1725Project.project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1.connectionManagerSettings.startupRetryCount
+  : "0"
+  jdbcfunc.SAPTxStore.failFastMode: false
   jdbcfunc.Xref.failFastMode: true
   jdbcfunc.ISDashboardStats.connPoolAlias: Embedded-Database-Pool
   jdbc.SAP-TxStore-Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
