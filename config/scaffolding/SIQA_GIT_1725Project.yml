@@ -18,21 +18,13 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 - name: WmSalesforceRESTProvider
+  version: 12.0.0.0.4
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
+- name: WmSalesforceProvider
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
-- serviceName: project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1
-  packages:
-  - name: SIQA_GIT_1725Project
-    version: "1.0"
-  - name: TPP_services_in_FCS
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
-  - name: WmSalesforceRESTProvider
-    version: 12.0.0.0.4
 - serviceName: project.siqa_git_1725.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:TestDB
   packages:
   - name: SIQA_GIT_1725Project
@@ -43,9 +35,11 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
-- serviceName: project.siqa_git_1725.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:Dec17_SF_RestConnAlias_Siqa
+- serviceName: project.siqa_git_1725.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:SoapConnAlias
   packages:
   - name: SIQA_GIT_1725Project
     version: "1.0"
@@ -55,6 +49,8 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
 - serviceName: project.siqa_git_1725.integrations:Call_refData
@@ -67,6 +63,8 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
 - serviceName: project.siqa_git_1725.referencedata:refData
@@ -79,6 +77,8 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
 - serviceName: project.siqa_git_1725.integrations:Copy_Sum
@@ -91,16 +91,18 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
 - serviceName: pub.math:addInts
   packages:
   - name: WmPublic
-    version: 12.0.0.0.691
+    version: 12.0.0.0.692
 - serviceName: pub.flow:debugLog
   packages:
   - name: WmPublic
-    version: 12.0.0.0.691
+    version: 12.0.0.0.692
 - serviceName: project.siqa_git_1725.integrations:Sum
   packages:
   - name: SIQA_GIT_1725Project
@@ -111,6 +113,8 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
 - serviceName: project.siqa_git_1725.integrations:Test_Adpater
@@ -123,6 +127,8 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
 - serviceName: project.siqa_git_1725.integrations:Test_RestConnector
@@ -135,6 +141,8 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
 - serviceName: project.siqa_git_1725.integrations:deepclonetest
@@ -147,24 +155,26 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.9
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.4
 - serviceName: pub.string:stringToBytes
   packages:
   - name: WmPublic
-    version: 12.0.0.0.691
+    version: 12.0.0.0.692
 - serviceName: pub.utils:deepClone
   packages:
   - name: WmPublic
-    version: 12.0.0.0.691
+    version: 12.0.0.0.692
 - serviceName: pub.string:bytesToString
   packages:
   - name: WmPublic
-    version: 12.0.0.0.691
+    version: 12.0.0.0.692
 - serviceName: pub.alert:emit
   packages:
   - name: WmPublic
-    version: 12.0.0.0.691
+    version: 12.0.0.0.692
 configurationVariables:
   jdbc.Embedded-Database-Pool.waitingThread: "0"
   jdbc.SAP-TxStore-Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP-TxStore-Pool.log;ddtdbg.ProtocolTraceShowTime=true
